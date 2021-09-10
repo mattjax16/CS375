@@ -1,0 +1,70 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[portrait]{geometry}
+\geometry{tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\usepackage{../latex/lplfitch}
+\usepackage{enumitem}
+\usepackage{color}
+
+\usepackage{fancyvrb}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\Large{\bf Assignment 0}}
+\chead{}
+\rhead{}
+\lfoot{CS 375 - Analysis of Algorithms}
+\cfoot{}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\footrulewidth}{3pt}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}It will be very helpful for me for students to complete this assignment to the best of their ability so that I can guage the level of mathematical background of the class. Because of that, some of these questions are difficult and {\bf I absolutely do not expect all of them to answered completely.} A reminder that assignments such as these are graded only on completion; for this assignment in particular, if you have no idea how to respond to a question, a simple ``idk" will suffice. 
+
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Order the following functions of $n$ by asymptotic growth from least to greatest (no need to show work):
+		$$n^2\ \ \ \ \ 100n\ \ \ \ \ 20n\log n\ \ \ \ \ \log(n^3)\ \ \ \ \ 2^n\ \ \ \ \ 50$$
+		\vspace{1 in}
+		\item How many (none, some, most, all) of these do you think you could formally show to someone else if necessary? 
+		\vspace{.3 in}
+	\end{enumerate}
+	
+	\item \begin{enumerate}
+		\item The worst case runtime of bubble sort on a list of $n$ items is:
+		\vspace{.3 in}
+		\item Convince me (your professor, who you can assume knows everything you've learned in your classes in CS so far) that bubble sort won't take longer than whatever bound you gave in (a). 
+		\vspace{1.5 in}
+		\item Convince me that you can't give a better (ie, lower) bound than you gave in (a).
+		\vspace{1.5 in}
+	\end{enumerate}
+	\newpage
+	\item Consider the following scheduling problem: a motivated student has collected a list of $n$ classes of varying durations they would like to take, without any preferances between classes in their list. The student knows the start and end times of all the classes. Desiring to take as many classes as possible, the student decides to take the classes in order of shortest class length to greatest. \\Their strategy will not necessarily work to ensure they take as many classes as possible. Convince me of this. 
+	\vspace{3 in}
+	\item Consider the following algorithm to determine if a list $L = (e_1, ..., e_n)$ never repeats an element (so $e_1\neq e_2, e_3, ..., e_n$, and $e_2\neq e_3, ..., e_n$, and so on): 
+	\begin{enumerate}[label=\roman*)]
+		\item For each item $e_i$
+		\begin{enumerate}[label=\alph*)]
+			\item For each other item $e_j$ where $j\neq i$, if $e_j = e_i$ announce that $e_j$ is repeated and end. 
+		\end{enumerate}
+		\item If this line is reached, then announce that all items are unique and end. 
+	\end{enumerate}
+	What is the worst case runtime of this algorithm as a function of $n$? 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+\end{document}
