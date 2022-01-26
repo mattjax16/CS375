@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"workspaces": [
+		"./data-extraction",
+		"./extension",
+		"./webview"
+	],
+	"scripts": {
+		"build": "yarn build-data-extraction && yarn build-ui && yarn build-extension",
+		"build-data-extraction": "yarn workspace @hediet/debug-visualizer-data-extraction build",
+		"build-ui": "yarn workspace debug-visualizer-webview build",
+		"build-extension": "yarn workspace debug-visualizer build"
+	},
+	"devDependencies": {
+		"prettier": "^1.19.1"
+	}
+}

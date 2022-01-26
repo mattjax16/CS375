@@ -1,0 +1,48 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[portrait]{geometry}
+\geometry{tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\usepackage{../latex/lplfitch}
+\usepackage{enumitem}
+\usepackage{color}
+
+\usepackage{fancyvrb}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\Large{\bf Problem Set 1: \textsc{Greedy}}}
+\chead{}
+\rhead{Due: Monday 9/27 11:59PM}
+\lfoot{CS 375 - Analysis of Algorithms}
+\cfoot{}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\footrulewidth}{3pt}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+Feel free to work in groups of at most 4 for these - if you have a group of more than 4, please run it by me first. If you do work in a group, please include the names of those that you worked with. \textbf{However: each student should submit a separate copy where the solutions have been written by yourself.}
+
+\begin{enumerate}
+    \item (10 points) A particular shipping company facility is looking to optimize their truck loading procedures. Boxes arrive at their facility one by one and \textbf{must be loaded into trucks in the order of arrival}. Unfortunately, only one truck can fit in their loading dock at a time. The company currently loads by filling trucks until they reach a box they cannot fit, at which time they send off the current truck and begin loading the next. The company wonders if they might be able to save on the number of trucks used by sending off a truck that is less full, allowing future trucks to potentially be better packed. Convince me that their current strategy is optimal. 
+    
+    \item A railroad path has been constructed, but station locations have not been chosen yet. For our purposes, imagine the railroad as a number line, with some points on the line marked as town locations. Our job is to choose specific points on the line to build train stations; stations need not be collocated with towns, but can be if desired. Every town must be within distance $R$ of a train station. The goal of the algorithm is to find a minimal collection of locations to build train stations.
+    \begin{enumerate}
+        \item (5 points) We'll say a train station $S$ adds a town $T$ if the town $T$ is within $R$ distance of $S$ and $T$ is not already within $R$ distance of a previously chosen train station. Consider the following algorithm: until all towns are added, repeatedly build train stations where you can maximize the number of towns added. Convince me that this algorithm is incorrect. 
+        \item (10 points) Design a greedy algorithm and convince me that it can be implemented with a polynomial runtime and that it is correct. 
+    \end{enumerate}
+    
+    \item For the purposes of this problem, imagine you are a kids' camp counselor in charge of teaching the kids how to play hockey. You have a stock of $n$ hockey sticks of varying sizes available for the $n$ kids, also of varying sizes. To make things simpler, let's say that a size 1 stick should be use by a size 1 kid, a size 2 stick with a size 2 kid, and so on. However, any kid can theoretically use any available hockey stick, albeit a bit uncomfortably. You want to figure out a way to distribute the hockey sticks to minimize the total difference between all the kids and their paired sticks. 
+    \begin{enumerate}
+        \item (5 points) Consider the algorithm that assigns hockey sticks sequentially with the minimal difference in size possible. So first you assign as many hockey sticks as you can that are perfect matches, then you assign hockey sticks that could be just a difference of 1 in size, then difference 2, and so on until all the hockey sticks have been assigned. Convince me that this algorithm is not correct. 
+        \item (10 points) Design a greedy algorithm and convince me that it can be implemented with a polynomial runtime and that it is correct.
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}

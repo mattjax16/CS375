@@ -1,0 +1,27 @@
+
+
+
+The dynamic programing algorithm is recursive so we will divide the initial array in
+half until the given sub array is of length 1 or 2. We will choose the element of the
+subarray that is the largest and add it to our return array of chosen elements.  We will
+return the backup values ]e between the larger and smaller element in the
+subarray or in the case of one element it is the value of that element. We also return the running total of the sum of
+each subarray.
+
+As me move to the next level, we check if 2 element directly bordering the divide of the two
+subarrays are both in the return arrays of choices.
+
+If they are;
+We calculate a new loss value that is the sum of the two loss values returned.
+The new running total is the sum of the two running totals minus the smaller of the two loss values.
+We switch to the backup choices of the subarray with the lower loss value.
+
+We make a new backup choices array using
+
+Otherwise;
+We add the two running totals to create the new running total and we add the two loss values to create the new
+loss value.
+
+
+
+The new loss value, running total, and choices are returned.

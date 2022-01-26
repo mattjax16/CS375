@@ -1,0 +1,18 @@
+@startuml Main
+
+[data-extraction] 
+[webview]
+[extension]
+[hediet/visualization]
+
+[webview] ..> [extension]: "Uses RPC contracts, connects using websockets"
+[extension] ..> [webview]: "Loads into a Webview in VS Code"
+
+[webview] ..> [hediet/visualization]: "Uses React Components"
+
+
+[extension] ..> [data-extraction]: "Injects Runtime into JavaScript applications"
+
+[webview] ..> [data-extraction]: "Uses common types"
+
+@enduml
